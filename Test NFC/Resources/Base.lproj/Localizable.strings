@@ -9,7 +9,7 @@
 "can_txt_title" = "CAN";
 "can_txt_can_intro" = "Please enter your card's CAN.";
 "can_edt_can_enter_can" = "CAN";
-"can_btn_next_login_test" = "Login-Test";
+"can_btn_next_login_test" = "Login";
 "can_btn_next_reset_pin" = "Unlock card";
 "can_btn_next_reset_pin_with_new_pin" = "Set custom PIN";
 "can_txt_help_title" = "Where can I find my CAN?";

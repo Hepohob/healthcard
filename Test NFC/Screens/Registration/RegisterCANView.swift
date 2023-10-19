@@ -61,12 +61,14 @@ struct RegisterCANView: View {
                                 .accessibility(identifier: "can_btn_next_reset_pin")
                         }
                         .disabled(!buttonEnabled)
+                        .hidden()
 
                         NavigationLink(destination: ChangeReferenceDataSetNewPINView(can: storedCan)) {
                             GTextButton(label: "can_btn_next_reset_pin_with_new_pin", enabled: buttonEnabled)
                                 .accessibility(identifier: "can_btn_next_reset_pin_with_new_pin")
                         }
                         .disabled(!buttonEnabled)
+                        .hidden()
 
                         NavigationLink(destination: RegisterPINView(can: storedCan)) {
                             GTextButton(label: "can_btn_next_login_test", enabled: buttonEnabled)
@@ -79,6 +81,7 @@ struct RegisterCANView: View {
                         .font(.subheadline)
                         .padding(.vertical)
                         .accessibility(identifier: "can_txt_help_title")
+                        .hidden()
 
                     Image(decorative: "find_can")
                         .resizable()
@@ -88,6 +91,7 @@ struct RegisterCANView: View {
                     Text("can_txt_help_explanation")
                         .font(.footnote)
                         .accessibility(identifier: "can_txt_help_explanation")
+                        .hidden()
 
                     Spacer()
                 }
@@ -116,3 +120,4 @@ struct RegisterCANView_Previews: PreviewProvider {
     }
 }
 #endif
+

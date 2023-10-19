@@ -9,21 +9,132 @@
 /* Begin PBXBuildFile section */
 		650D75122AD59B910039CCB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650D75112AD59B910039CCB5 /* AppDelegate.swift */; };
 		650D75142AD59B910039CCB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650D75132AD59B910039CCB5 /* SceneDelegate.swift */; };
-		650D75162AD59B910039CCB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650D75152AD59B910039CCB5 /* ViewController.swift */; };
 		650D75192AD59B910039CCB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650D75172AD59B910039CCB5 /* Main.storyboard */; };
 		650D751B2AD59B920039CCB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 650D751A2AD59B920039CCB5 /* Assets.xcassets */; };
 		650D751E2AD59B920039CCB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650D751C2AD59B920039CCB5 /* LaunchScreen.storyboard */; };
+		650D75272AD59C370039CCB5 /* CardReaderProviderApi in Frameworks */ = {isa = PBXBuildFile; productRef = 650D75262AD59C370039CCB5 /* CardReaderProviderApi */; };
+		650D75292AD59C370039CCB5 /* HealthCardAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 650D75282AD59C370039CCB5 /* HealthCardAccess */; };
+		650D752B2AD59C370039CCB5 /* HealthCardControl in Frameworks */ = {isa = PBXBuildFile; productRef = 650D752A2AD59C370039CCB5 /* HealthCardControl */; };
+		650D752D2AD59C370039CCB5 /* Helper in Frameworks */ = {isa = PBXBuildFile; productRef = 650D752C2AD59C370039CCB5 /* Helper */; };
+		650D752F2AD59C370039CCB5 /* NFCCardReaderProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 650D752E2AD59C370039CCB5 /* NFCCardReaderProvider */; };
+		656B3E032AE139D700E2C1C5 /* NFCLoginControllerJWTExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B3E022AE139D700E2C1C5 /* NFCLoginControllerJWTExt.swift */; };
+		656B3E102AE13A3300E2C1C5 /* JWE+KDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B3E052AE13A3300E2C1C5 /* JWE+KDF.swift */; };
+		656B3E112AE13A3300E2C1C5 /* Claims.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B3E062AE13A3300E2C1C5 /* Claims.swift */; };
+		656B3E122AE13A3300E2C1C5 /* JWTSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B3E072AE13A3300E2C1C5 /* JWTSigner.swift */; };
+		656B3E132AE13A3300E2C1C5 /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B3E082AE13A3300E2C1C5 /* JWT.swift */; };
+		656B3E142AE13A3300E2C1C5 /* JWTSignatureVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B3E092AE13A3300E2C1C5 /* JWTSignatureVerifier.swift */; };
+		656B3E152AE13A3300E2C1C5 /* Data+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B3E0A2AE13A3300E2C1C5 /* Data+Base64.swift */; };
+		656B3E162AE13A3300E2C1C5 /* JWE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B3E0B2AE13A3300E2C1C5 /* JWE.swift */; };
+		656B3E172AE13A3300E2C1C5 /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B3E0C2AE13A3300E2C1C5 /* String+Base64.swift */; };
+		656B3E182AE13A3300E2C1C5 /* JWE+Encryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B3E0D2AE13A3300E2C1C5 /* JWE+Encryption.swift */; };
+		656B3E192AE13A3300E2C1C5 /* JWK+x962.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B3E0E2AE13A3300E2C1C5 /* JWK+x962.swift */; };
+		656B3E1A2AE13A3300E2C1C5 /* JWKS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B3E0F2AE13A3300E2C1C5 /* JWKS.swift */; };
+		656B3E5E2AE141AB00E2C1C5 /* Data+SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B3E572AE141AA00E2C1C5 /* Data+SHA256.swift */; };
+		656B3E5F2AE141AB00E2C1C5 /* DiscoveryDocumentPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B3E582AE141AA00E2C1C5 /* DiscoveryDocumentPayload.swift */; };
+		656B3E602AE141AB00E2C1C5 /* SecKeyRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B3E592AE141AA00E2C1C5 /* SecKeyRandom.swift */; };
+		656B3E612AE141AB00E2C1C5 /* RealIDPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B3E5A2AE141AB00E2C1C5 /* RealIDPClient.swift */; };
+		656B3E622AE141AB00E2C1C5 /* TokenPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B3E5B2AE141AB00E2C1C5 /* TokenPayload.swift */; };
+		656B3E632AE141AB00E2C1C5 /* IDPCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B3E5C2AE141AB00E2C1C5 /* IDPCrypto.swift */; };
+		656B3E642AE141AB00E2C1C5 /* URLRequest+FormUrlEncoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B3E5D2AE141AB00E2C1C5 /* URLRequest+FormUrlEncoded.swift */; };
+		656B3E662AE141E000E2C1C5 /* NestedJWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B3E652AE141E000E2C1C5 /* NestedJWT.swift */; };
+		656B3E682AE146A000E2C1C5 /* Certificates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B3E672AE146A000E2C1C5 /* Certificates.swift */; };
+		656B3E6A2AE1508600E2C1C5 /* IDPChallengeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B3E692AE1508600E2C1C5 /* IDPChallengeResponse.swift */; };
+		65F191172ADE78CD00D1E211 /* EnvironmentValues+ResetPINController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F190EC2ADE78CC00D1E211 /* EnvironmentValues+ResetPINController.swift */; };
+		65F191182ADE78CD00D1E211 /* KeyboardHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F190ED2ADE78CC00D1E211 /* KeyboardHeight.swift */; };
+		65F191192ADE78CD00D1E211 /* EnvironmentValues+LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F190EE2ADE78CC00D1E211 /* EnvironmentValues+LoginController.swift */; };
+		65F1911A2ADE78CD00D1E211 /* EnvironmentValues+ChangeReferenceDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F190EF2ADE78CC00D1E211 /* EnvironmentValues+ChangeReferenceDataController.swift */; };
+		65F1911B2ADE78CD00D1E211 /* CallOnMainThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F190F02ADE78CC00D1E211 /* CallOnMainThread.swift */; };
+		65F1911D2ADE78CD00D1E211 /* CardReaderProviderApi+LocalizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F190F32ADE78CC00D1E211 /* CardReaderProviderApi+LocalizedError.swift */; };
+		65F1911E2ADE78CD00D1E211 /* NFCResetRetryCounterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F190F42ADE78CC00D1E211 /* NFCResetRetryCounterController.swift */; };
+		65F1911F2ADE78CD00D1E211 /* NFCLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F190F52ADE78CC00D1E211 /* NFCLoginController.swift */; };
+		65F191202ADE78CD00D1E211 /* NFCCardReaderProvider+LocalizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F190F62ADE78CC00D1E211 /* NFCCardReaderProvider+LocalizedError.swift */; };
+		65F191212ADE78CD00D1E211 /* HealthCardControl+LocalizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F190F72ADE78CC00D1E211 /* HealthCardControl+LocalizedError.swift */; };
+		65F191222ADE78CD00D1E211 /* HealthCardAccess+LocalizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F190F82ADE78CC00D1E211 /* HealthCardAccess+LocalizedError.swift */; };
+		65F191232ADE78CD00D1E211 /* NFCChangeReferenceDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F190F92ADE78CC00D1E211 /* NFCChangeReferenceDataController.swift */; };
+		65F191242ADE78CD00D1E211 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65F190FB2ADE78CD00D1E211 /* Localizable.strings */; };
+		65F191252ADE78CD00D1E211 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65F190FE2ADE78CD00D1E211 /* Assets.xcassets */; };
+		65F191262ADE78CD00D1E211 /* debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65F190FF2ADE78CD00D1E211 /* debug.xcconfig */; };
+		65F191272ADE78CD00D1E211 /* release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65F191002ADE78CD00D1E211 /* release.xcconfig */; };
+		65F1912A2ADE78CD00D1E211 /* base.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65F191052ADE78CD00D1E211 /* base.xcconfig */; };
+		65F1912C2ADE78CD00D1E211 /* ReadingResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F191092ADE78CD00D1E211 /* ReadingResultsView.swift */; };
+		65F1912D2ADE78CD00D1E211 /* RegisterCANView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F1910A2ADE78CD00D1E211 /* RegisterCANView.swift */; };
+		65F1912E2ADE78CD00D1E211 /* RegisterPINView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F1910B2ADE78CD00D1E211 /* RegisterPINView.swift */; };
+		65F1912F2ADE78CD00D1E211 /* StartNFCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F1910C2ADE78CD00D1E211 /* StartNFCView.swift */; };
+		65F191302ADE78CD00D1E211 /* ResetRetryCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F1910D2ADE78CD00D1E211 /* ResetRetryCounterView.swift */; };
+		65F191312ADE78CD00D1E211 /* ChangeReferenceDataSetNewPINView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F1910E2ADE78CD00D1E211 /* ChangeReferenceDataSetNewPINView.swift */; };
+		65F191322ADE78CD00D1E211 /* ResetRetryCounterWithNewPINView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F1910F2ADE78CD00D1E211 /* ResetRetryCounterWithNewPINView.swift */; };
+		65F191332ADE78CD00D1E211 /* NFCLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F191102ADE78CD00D1E211 /* NFCLoginViewModel.swift */; };
+		65F191342ADE78CD00D1E211 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F191112ADE78CD00D1E211 /* ActivityViewController.swift */; };
+		65F191352ADE78CD00D1E211 /* NFCChangeReferenceDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F191122ADE78CD00D1E211 /* NFCChangeReferenceDataViewModel.swift */; };
+		65F191362ADE78CD00D1E211 /* NFCResetRetryCounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F191132ADE78CD00D1E211 /* NFCResetRetryCounterViewModel.swift */; };
+		65F191372ADE78CD00D1E211 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F191142ADE78CD00D1E211 /* ViewState.swift */; };
+		65F191382ADE78CD00D1E211 /* GTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F191152ADE78CD00D1E211 /* GTextButton.swift */; };
+		65F191392ADE78CD00D1E211 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F191162ADE78CD00D1E211 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		650D750E2AD59B910039CCB5 /* Test NFC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test NFC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		650D75112AD59B910039CCB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		650D75132AD59B910039CCB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		650D75152AD59B910039CCB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		650D75182AD59B910039CCB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		650D751A2AD59B920039CCB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		650D751D2AD59B920039CCB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		650D751F2AD59B920039CCB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		656B3E022AE139D700E2C1C5 /* NFCLoginControllerJWTExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCLoginControllerJWTExt.swift; sourceTree = "<group>"; };
+		656B3E052AE13A3300E2C1C5 /* JWE+KDF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JWE+KDF.swift"; sourceTree = "<group>"; };
+		656B3E062AE13A3300E2C1C5 /* Claims.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Claims.swift; sourceTree = "<group>"; };
+		656B3E072AE13A3300E2C1C5 /* JWTSigner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWTSigner.swift; sourceTree = "<group>"; };
+		656B3E082AE13A3300E2C1C5 /* JWT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWT.swift; sourceTree = "<group>"; };
+		656B3E092AE13A3300E2C1C5 /* JWTSignatureVerifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWTSignatureVerifier.swift; sourceTree = "<group>"; };
+		656B3E0A2AE13A3300E2C1C5 /* Data+Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Base64.swift"; sourceTree = "<group>"; };
+		656B3E0B2AE13A3300E2C1C5 /* JWE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWE.swift; sourceTree = "<group>"; };
+		656B3E0C2AE13A3300E2C1C5 /* String+Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Base64.swift"; sourceTree = "<group>"; };
+		656B3E0D2AE13A3300E2C1C5 /* JWE+Encryption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JWE+Encryption.swift"; sourceTree = "<group>"; };
+		656B3E0E2AE13A3300E2C1C5 /* JWK+x962.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JWK+x962.swift"; sourceTree = "<group>"; };
+		656B3E0F2AE13A3300E2C1C5 /* JWKS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWKS.swift; sourceTree = "<group>"; };
+		656B3E572AE141AA00E2C1C5 /* Data+SHA256.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+SHA256.swift"; sourceTree = "<group>"; };
+		656B3E582AE141AA00E2C1C5 /* DiscoveryDocumentPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryDocumentPayload.swift; sourceTree = "<group>"; };
+		656B3E592AE141AA00E2C1C5 /* SecKeyRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecKeyRandom.swift; sourceTree = "<group>"; };
+		656B3E5A2AE141AB00E2C1C5 /* RealIDPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealIDPClient.swift; sourceTree = "<group>"; };
+		656B3E5B2AE141AB00E2C1C5 /* TokenPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenPayload.swift; sourceTree = "<group>"; };
+		656B3E5C2AE141AB00E2C1C5 /* IDPCrypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPCrypto.swift; sourceTree = "<group>"; };
+		656B3E5D2AE141AB00E2C1C5 /* URLRequest+FormUrlEncoded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+FormUrlEncoded.swift"; sourceTree = "<group>"; };
+		656B3E652AE141E000E2C1C5 /* NestedJWT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NestedJWT.swift; sourceTree = "<group>"; };
+		656B3E672AE146A000E2C1C5 /* Certificates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Certificates.swift; sourceTree = "<group>"; };
+		656B3E692AE1508600E2C1C5 /* IDPChallengeResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPChallengeResponse.swift; sourceTree = "<group>"; };
+		65F190EB2ADE784700D1E211 /* Test NFC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Test NFC.entitlements"; sourceTree = "<group>"; };
+		65F190EC2ADE78CC00D1E211 /* EnvironmentValues+ResetPINController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+ResetPINController.swift"; sourceTree = "<group>"; };
+		65F190ED2ADE78CC00D1E211 /* KeyboardHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHeight.swift; sourceTree = "<group>"; };
+		65F190EE2ADE78CC00D1E211 /* EnvironmentValues+LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+LoginController.swift"; sourceTree = "<group>"; };
+		65F190EF2ADE78CC00D1E211 /* EnvironmentValues+ChangeReferenceDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+ChangeReferenceDataController.swift"; sourceTree = "<group>"; };
+		65F190F02ADE78CC00D1E211 /* CallOnMainThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallOnMainThread.swift; sourceTree = "<group>"; };
+		65F190F32ADE78CC00D1E211 /* CardReaderProviderApi+LocalizedError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CardReaderProviderApi+LocalizedError.swift"; sourceTree = "<group>"; };
+		65F190F42ADE78CC00D1E211 /* NFCResetRetryCounterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCResetRetryCounterController.swift; sourceTree = "<group>"; };
+		65F190F52ADE78CC00D1E211 /* NFCLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCLoginController.swift; sourceTree = "<group>"; };
+		65F190F62ADE78CC00D1E211 /* NFCCardReaderProvider+LocalizedError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NFCCardReaderProvider+LocalizedError.swift"; sourceTree = "<group>"; };
+		65F190F72ADE78CC00D1E211 /* HealthCardControl+LocalizedError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HealthCardControl+LocalizedError.swift"; sourceTree = "<group>"; };
+		65F190F82ADE78CC00D1E211 /* HealthCardAccess+LocalizedError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HealthCardAccess+LocalizedError.swift"; sourceTree = "<group>"; };
+		65F190F92ADE78CC00D1E211 /* NFCChangeReferenceDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCChangeReferenceDataController.swift; sourceTree = "<group>"; };
+		65F190FC2ADE78CD00D1E211 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		65F190FE2ADE78CD00D1E211 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		65F190FF2ADE78CD00D1E211 /* debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
+		65F191002ADE78CD00D1E211 /* release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
+		65F191032ADE78CD00D1E211 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		65F191052ADE78CD00D1E211 /* base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = base.xcconfig; sourceTree = "<group>"; };
+		65F191092ADE78CD00D1E211 /* ReadingResultsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingResultsView.swift; sourceTree = "<group>"; };
+		65F1910A2ADE78CD00D1E211 /* RegisterCANView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterCANView.swift; sourceTree = "<group>"; };
+		65F1910B2ADE78CD00D1E211 /* RegisterPINView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPINView.swift; sourceTree = "<group>"; };
+		65F1910C2ADE78CD00D1E211 /* StartNFCView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartNFCView.swift; sourceTree = "<group>"; };
+		65F1910D2ADE78CD00D1E211 /* ResetRetryCounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetRetryCounterView.swift; sourceTree = "<group>"; };
+		65F1910E2ADE78CD00D1E211 /* ChangeReferenceDataSetNewPINView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeReferenceDataSetNewPINView.swift; sourceTree = "<group>"; };
+		65F1910F2ADE78CD00D1E211 /* ResetRetryCounterWithNewPINView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetRetryCounterWithNewPINView.swift; sourceTree = "<group>"; };
+		65F191102ADE78CD00D1E211 /* NFCLoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCLoginViewModel.swift; sourceTree = "<group>"; };
+		65F191112ADE78CD00D1E211 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		65F191122ADE78CD00D1E211 /* NFCChangeReferenceDataViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCChangeReferenceDataViewModel.swift; sourceTree = "<group>"; };
+		65F191132ADE78CD00D1E211 /* NFCResetRetryCounterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCResetRetryCounterViewModel.swift; sourceTree = "<group>"; };
+		65F191142ADE78CD00D1E211 /* ViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		65F191152ADE78CD00D1E211 /* GTextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTextButton.swift; sourceTree = "<group>"; };
+		65F191162ADE78CD00D1E211 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +142,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				650D752F2AD59C370039CCB5 /* NFCCardReaderProvider in Frameworks */,
+				650D75292AD59C370039CCB5 /* HealthCardAccess in Frameworks */,
+				650D75272AD59C370039CCB5 /* CardReaderProviderApi in Frameworks */,
+				650D752D2AD59C370039CCB5 /* Helper in Frameworks */,
+				650D752B2AD59C370039CCB5 /* HealthCardControl in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +172,124 @@
 		650D75102AD59B910039CCB5 /* Test NFC */ = {
 			isa = PBXGroup;
 			children = (
+				65F190EB2ADE784700D1E211 /* Test NFC.entitlements */,
+				650D751F2AD59B920039CCB5 /* Info.plist */,
 				650D75112AD59B910039CCB5 /* AppDelegate.swift */,
+				65F190F02ADE78CC00D1E211 /* CallOnMainThread.swift */,
+				65F190EF2ADE78CC00D1E211 /* EnvironmentValues+ChangeReferenceDataController.swift */,
+				65F190EE2ADE78CC00D1E211 /* EnvironmentValues+LoginController.swift */,
+				65F190EC2ADE78CC00D1E211 /* EnvironmentValues+ResetPINController.swift */,
+				65F190ED2ADE78CC00D1E211 /* KeyboardHeight.swift */,
 				650D75132AD59B910039CCB5 /* SceneDelegate.swift */,
-				650D75152AD59B910039CCB5 /* ViewController.swift */,
-				650D75172AD59B910039CCB5 /* Main.storyboard */,
 				650D751A2AD59B920039CCB5 /* Assets.xcassets */,
 				650D751C2AD59B920039CCB5 /* LaunchScreen.storyboard */,
-				650D751F2AD59B920039CCB5 /* Info.plist */,
+				650D75172AD59B910039CCB5 /* Main.storyboard */,
+				65F190F22ADE78CC00D1E211 /* NFC */,
+				65F190FA2ADE78CD00D1E211 /* Resources */,
+				65F191072ADE78CD00D1E211 /* Screens */,
 			);
 			path = "Test NFC";
+			sourceTree = "<group>";
+		};
+		656B3E042AE13A3300E2C1C5 /* JWT */ = {
+			isa = PBXGroup;
+			children = (
+				656B3E052AE13A3300E2C1C5 /* JWE+KDF.swift */,
+				656B3E062AE13A3300E2C1C5 /* Claims.swift */,
+				656B3E072AE13A3300E2C1C5 /* JWTSigner.swift */,
+				656B3E082AE13A3300E2C1C5 /* JWT.swift */,
+				656B3E092AE13A3300E2C1C5 /* JWTSignatureVerifier.swift */,
+				656B3E0A2AE13A3300E2C1C5 /* Data+Base64.swift */,
+				656B3E0B2AE13A3300E2C1C5 /* JWE.swift */,
+				656B3E0C2AE13A3300E2C1C5 /* String+Base64.swift */,
+				656B3E0D2AE13A3300E2C1C5 /* JWE+Encryption.swift */,
+				656B3E0E2AE13A3300E2C1C5 /* JWK+x962.swift */,
+				656B3E0F2AE13A3300E2C1C5 /* JWKS.swift */,
+			);
+			path = JWT;
+			sourceTree = "<group>";
+		};
+		656B3E2A2AE1408400E2C1C5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				656B3E692AE1508600E2C1C5 /* IDPChallengeResponse.swift */,
+				656B3E652AE141E000E2C1C5 /* NestedJWT.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		656B3E562AE1416B00E2C1C5 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				656B3E572AE141AA00E2C1C5 /* Data+SHA256.swift */,
+				656B3E582AE141AA00E2C1C5 /* DiscoveryDocumentPayload.swift */,
+				656B3E5C2AE141AB00E2C1C5 /* IDPCrypto.swift */,
+				656B3E5A2AE141AB00E2C1C5 /* RealIDPClient.swift */,
+				656B3E592AE141AA00E2C1C5 /* SecKeyRandom.swift */,
+				656B3E5B2AE141AB00E2C1C5 /* TokenPayload.swift */,
+				656B3E5D2AE141AB00E2C1C5 /* URLRequest+FormUrlEncoded.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		65F190F22ADE78CC00D1E211 /* NFC */ = {
+			isa = PBXGroup;
+			children = (
+				656B3E562AE1416B00E2C1C5 /* Sources */,
+				656B3E2A2AE1408400E2C1C5 /* Models */,
+				656B3E042AE13A3300E2C1C5 /* JWT */,
+				65F190F32ADE78CC00D1E211 /* CardReaderProviderApi+LocalizedError.swift */,
+				65F190F42ADE78CC00D1E211 /* NFCResetRetryCounterController.swift */,
+				65F190F52ADE78CC00D1E211 /* NFCLoginController.swift */,
+				65F190F62ADE78CC00D1E211 /* NFCCardReaderProvider+LocalizedError.swift */,
+				65F190F72ADE78CC00D1E211 /* HealthCardControl+LocalizedError.swift */,
+				65F190F82ADE78CC00D1E211 /* HealthCardAccess+LocalizedError.swift */,
+				65F190F92ADE78CC00D1E211 /* NFCChangeReferenceDataController.swift */,
+				656B3E022AE139D700E2C1C5 /* NFCLoginControllerJWTExt.swift */,
+				656B3E672AE146A000E2C1C5 /* Certificates.swift */,
+			);
+			path = NFC;
+			sourceTree = "<group>";
+		};
+		65F190FA2ADE78CD00D1E211 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				65F190FB2ADE78CD00D1E211 /* Localizable.strings */,
+				65F190FE2ADE78CD00D1E211 /* Assets.xcassets */,
+				65F190FF2ADE78CD00D1E211 /* debug.xcconfig */,
+				65F191002ADE78CD00D1E211 /* release.xcconfig */,
+				65F191052ADE78CD00D1E211 /* base.xcconfig */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		65F191072ADE78CD00D1E211 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				65F191082ADE78CD00D1E211 /* Registration */,
+				65F191142ADE78CD00D1E211 /* ViewState.swift */,
+				65F191152ADE78CD00D1E211 /* GTextButton.swift */,
+				65F191162ADE78CD00D1E211 /* Colors.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		65F191082ADE78CD00D1E211 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				65F191092ADE78CD00D1E211 /* ReadingResultsView.swift */,
+				65F1910A2ADE78CD00D1E211 /* RegisterCANView.swift */,
+				65F1910B2ADE78CD00D1E211 /* RegisterPINView.swift */,
+				65F1910C2ADE78CD00D1E211 /* StartNFCView.swift */,
+				65F1910D2ADE78CD00D1E211 /* ResetRetryCounterView.swift */,
+				65F1910E2ADE78CD00D1E211 /* ChangeReferenceDataSetNewPINView.swift */,
+				65F1910F2ADE78CD00D1E211 /* ResetRetryCounterWithNewPINView.swift */,
+				65F191102ADE78CD00D1E211 /* NFCLoginViewModel.swift */,
+				65F191112ADE78CD00D1E211 /* ActivityViewController.swift */,
+				65F191122ADE78CD00D1E211 /* NFCChangeReferenceDataViewModel.swift */,
+				65F191132ADE78CD00D1E211 /* NFCResetRetryCounterViewModel.swift */,
+			);
+			path = Registration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +308,13 @@
 			dependencies = (
 			);
 			name = "Test NFC";
+			packageProductDependencies = (
+				650D75262AD59C370039CCB5 /* CardReaderProviderApi */,
+				650D75282AD59C370039CCB5 /* HealthCardAccess */,
+				650D752A2AD59C370039CCB5 /* HealthCardControl */,
+				650D752C2AD59C370039CCB5 /* Helper */,
+				650D752E2AD59C370039CCB5 /* NFCCardReaderProvider */,
+			);
 			productName = "Test NFC";
 			productReference = 650D750E2AD59B910039CCB5 /* Test NFC.app */;
 			productType = "com.apple.product-type.application";
@@ -109,8 +341,12 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 650D75052AD59B910039CCB5;
+			packageReferences = (
+				650D75252AD59C370039CCB5 /* XCRemoteSwiftPackageReference "ref-OpenHealthCardKit" */,
+			);
 			productRefGroup = 650D750F2AD59B910039CCB5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,8 +362,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				650D751E2AD59B920039CCB5 /* LaunchScreen.storyboard in Resources */,
+				65F191242ADE78CD00D1E211 /* Localizable.strings in Resources */,
+				65F191272ADE78CD00D1E211 /* release.xcconfig in Resources */,
+				65F1912A2ADE78CD00D1E211 /* base.xcconfig in Resources */,
 				650D751B2AD59B920039CCB5 /* Assets.xcassets in Resources */,
 				650D75192AD59B910039CCB5 /* Main.storyboard in Resources */,
+				65F191262ADE78CD00D1E211 /* debug.xcconfig in Resources */,
+				65F191252ADE78CD00D1E211 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +379,56 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				650D75162AD59B910039CCB5 /* ViewController.swift in Sources */,
+				656B3E642AE141AB00E2C1C5 /* URLRequest+FormUrlEncoded.swift in Sources */,
+				656B3E5F2AE141AB00E2C1C5 /* DiscoveryDocumentPayload.swift in Sources */,
+				656B3E6A2AE1508600E2C1C5 /* IDPChallengeResponse.swift in Sources */,
+				656B3E662AE141E000E2C1C5 /* NestedJWT.swift in Sources */,
+				65F191332ADE78CD00D1E211 /* NFCLoginViewModel.swift in Sources */,
+				65F191302ADE78CD00D1E211 /* ResetRetryCounterView.swift in Sources */,
+				656B3E162AE13A3300E2C1C5 /* JWE.swift in Sources */,
+				65F191372ADE78CD00D1E211 /* ViewState.swift in Sources */,
+				656B3E682AE146A000E2C1C5 /* Certificates.swift in Sources */,
+				65F1911A2ADE78CD00D1E211 /* EnvironmentValues+ChangeReferenceDataController.swift in Sources */,
+				65F191382ADE78CD00D1E211 /* GTextButton.swift in Sources */,
+				65F191392ADE78CD00D1E211 /* Colors.swift in Sources */,
+				656B3E102AE13A3300E2C1C5 /* JWE+KDF.swift in Sources */,
+				656B3E172AE13A3300E2C1C5 /* String+Base64.swift in Sources */,
+				656B3E122AE13A3300E2C1C5 /* JWTSigner.swift in Sources */,
+				65F191352ADE78CD00D1E211 /* NFCChangeReferenceDataViewModel.swift in Sources */,
+				656B3E622AE141AB00E2C1C5 /* TokenPayload.swift in Sources */,
+				65F191182ADE78CD00D1E211 /* KeyboardHeight.swift in Sources */,
+				656B3E602AE141AB00E2C1C5 /* SecKeyRandom.swift in Sources */,
+				656B3E612AE141AB00E2C1C5 /* RealIDPClient.swift in Sources */,
+				65F1912F2ADE78CD00D1E211 /* StartNFCView.swift in Sources */,
+				65F1912E2ADE78CD00D1E211 /* RegisterPINView.swift in Sources */,
 				650D75122AD59B910039CCB5 /* AppDelegate.swift in Sources */,
+				65F191222ADE78CD00D1E211 /* HealthCardAccess+LocalizedError.swift in Sources */,
+				65F191312ADE78CD00D1E211 /* ChangeReferenceDataSetNewPINView.swift in Sources */,
+				656B3E032AE139D700E2C1C5 /* NFCLoginControllerJWTExt.swift in Sources */,
 				650D75142AD59B910039CCB5 /* SceneDelegate.swift in Sources */,
+				65F1911E2ADE78CD00D1E211 /* NFCResetRetryCounterController.swift in Sources */,
+				656B3E632AE141AB00E2C1C5 /* IDPCrypto.swift in Sources */,
+				65F1911F2ADE78CD00D1E211 /* NFCLoginController.swift in Sources */,
+				65F191172ADE78CD00D1E211 /* EnvironmentValues+ResetPINController.swift in Sources */,
+				65F1912D2ADE78CD00D1E211 /* RegisterCANView.swift in Sources */,
+				65F191362ADE78CD00D1E211 /* NFCResetRetryCounterViewModel.swift in Sources */,
+				65F1911D2ADE78CD00D1E211 /* CardReaderProviderApi+LocalizedError.swift in Sources */,
+				656B3E182AE13A3300E2C1C5 /* JWE+Encryption.swift in Sources */,
+				656B3E132AE13A3300E2C1C5 /* JWT.swift in Sources */,
+				656B3E142AE13A3300E2C1C5 /* JWTSignatureVerifier.swift in Sources */,
+				65F191322ADE78CD00D1E211 /* ResetRetryCounterWithNewPINView.swift in Sources */,
+				656B3E152AE13A3300E2C1C5 /* Data+Base64.swift in Sources */,
+				65F191232ADE78CD00D1E211 /* NFCChangeReferenceDataController.swift in Sources */,
+				65F191202ADE78CD00D1E211 /* NFCCardReaderProvider+LocalizedError.swift in Sources */,
+				656B3E112AE13A3300E2C1C5 /* Claims.swift in Sources */,
+				65F191342ADE78CD00D1E211 /* ActivityViewController.swift in Sources */,
+				65F1912C2ADE78CD00D1E211 /* ReadingResultsView.swift in Sources */,
+				65F191192ADE78CD00D1E211 /* EnvironmentValues+LoginController.swift in Sources */,
+				656B3E1A2AE13A3300E2C1C5 /* JWKS.swift in Sources */,
+				656B3E5E2AE141AB00E2C1C5 /* Data+SHA256.swift in Sources */,
+				65F191212ADE78CD00D1E211 /* HealthCardControl+LocalizedError.swift in Sources */,
+				65F1911B2ADE78CD00D1E211 /* CallOnMainThread.swift in Sources */,
+				656B3E192AE13A3300E2C1C5 /* JWK+x962.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +449,15 @@
 				650D751D2AD59B920039CCB5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		65F190FB2ADE78CD00D1E211 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65F190FC2ADE78CD00D1E211 /* de */,
+				65F191032ADE78CD00D1E211 /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -290,11 +587,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Test NFC/Test NFC.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5D8357SCSF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Test NFC/Info.plist";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "NFC tag to read NDEF messages into the application";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -305,7 +604,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.alekseyneronov.testnfc.Test-NFC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alekseyneronov.erezept;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -318,11 +617,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Test NFC/Test NFC.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5D8357SCSF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Test NFC/Info.plist";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "NFC tag to read NDEF messages into the application";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -333,7 +634,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.alekseyneronov.testnfc.Test-NFC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alekseyneronov.erezept;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -363,6 +664,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		650D75252AD59C370039CCB5 /* XCRemoteSwiftPackageReference "ref-OpenHealthCardKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gematik/ref-OpenHealthCardKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		650D75262AD59C370039CCB5 /* CardReaderProviderApi */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 650D75252AD59C370039CCB5 /* XCRemoteSwiftPackageReference "ref-OpenHealthCardKit" */;
+			productName = CardReaderProviderApi;
+		};
+		650D75282AD59C370039CCB5 /* HealthCardAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 650D75252AD59C370039CCB5 /* XCRemoteSwiftPackageReference "ref-OpenHealthCardKit" */;
+			productName = HealthCardAccess;
+		};
+		650D752A2AD59C370039CCB5 /* HealthCardControl */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 650D75252AD59C370039CCB5 /* XCRemoteSwiftPackageReference "ref-OpenHealthCardKit" */;
+			productName = HealthCardControl;
+		};
+		650D752C2AD59C370039CCB5 /* Helper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 650D75252AD59C370039CCB5 /* XCRemoteSwiftPackageReference "ref-OpenHealthCardKit" */;
+			productName = Helper;
+		};
+		650D752E2AD59C370039CCB5 /* NFCCardReaderProvider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 650D75252AD59C370039CCB5 /* XCRemoteSwiftPackageReference "ref-OpenHealthCardKit" */;
+			productName = NFCCardReaderProvider;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 650D75062AD59B910039CCB5 /* Project object */;
 }

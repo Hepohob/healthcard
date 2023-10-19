@@ -45,8 +45,13 @@ extension X509: JWTSignatureVerifier {
         // [REQ:gemSpec_Krypt:A_17207]
         // [REQ:gemSpec_Krypt:GS-A_4357-01,GS-A_4357-02,GS-A_4361-02] Assure that brainpoolP256r1 is used
         guard let key = brainpoolP256r1VerifyPublicKey() else {
-            throw IDPError.unsupported("expected brainpool P256r1 key")
+            Swift.print("expected brainpool P256r1 key")
+            throw X509Error.unsupported("expected brainpool P256r1 key")
         }
         return try key.verify(signature: signature, message: message)
     }
+}
+
+enum X509Error: Error {
+    case unsupported(String)
 }
