@@ -84,9 +84,9 @@ struct StartNFCView: View {
                 .fixedSize(horizontal: false, vertical: true)
 
             #if DEBUG
-            if useCase == .login {
-                Toggle("Check for brainpool algorithm", isOn: $checkBrainpoolAlgorithm).padding()
-            }
+//            if useCase == .login {
+//                Toggle("Check for brainpool algorithm", isOn: $checkBrainpoolAlgorithm).padding()
+//            }
             #endif
             Spacer(minLength: 0)
 

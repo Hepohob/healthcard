@@ -30,7 +30,7 @@ struct GTextButton: View {
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 22)
                 .padding(10)
                 .foregroundColor(Color.white)
-                .background(Colors.buttonGreen)
+                .background(Colors.secondaryBlue1)
                 .cornerRadius(20)
         } else {
             Text(label)
@@ -38,7 +38,7 @@ struct GTextButton: View {
                 .font(self.font)
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 22)
                 .padding(10)
-                .foregroundColor(Colors.buttonGreen)
+                .foregroundColor(Colors.grayBorder)
                 .overlay(
                     RoundedRectangle(cornerRadius: 20)
                         .stroke(Colors.buttonGreen, lineWidth: 2)

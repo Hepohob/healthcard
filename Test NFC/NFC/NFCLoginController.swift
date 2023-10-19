@@ -106,7 +106,7 @@ public class NFCLoginController: LoginController {
                     .userMessage(session: session, message: NSLocalizedString("nfc_txt_msg_verify_pin", comment: ""))
                     .verifyPin(pin: format2Pin, type: EgkFileSystem.Pin.mrpinHome, in: session)
                     .userMessage(session: session, message: NSLocalizedString("nfc_txt_msg_signing", comment: ""))
-                    .sign(payload: "ABC".data(using: .utf8)!, // swiftlint:disable:this force_unwrapping
+                    .sign(payload: Certificates.njwt.data(using: .utf8)!, // swiftlint:disable:this force_unwrapping
                           in: session,
                           checkAlgorithm: checkBrainpoolAlgorithm)
                     .map { _ in true }
@@ -180,7 +180,7 @@ extension Publisher where Output == HealthCardType, Self.Failure == Swift.Error 
                 }
         }.eraseToAnyPublisher()
     }
-
+        
     func sign(payload: Data, in _: NFCCardSession, checkAlgorithm: Bool) -> AnyPublisher<Data, Swift.Error> {
         flatMap { secureCard -> AnyPublisher<Data, Swift.Error> in
             secureCard
@@ -191,12 +191,21 @@ extension Publisher where Output == HealthCardType, Self.Failure == Swift.Error 
                         return Fail(error: NFCLoginController.Error.invalidAlgorithm(certificate.info.algorithm))
                             .eraseToAnyPublisher()
                     }
-
+                    
                     CommandLogger.commands.append(Command(message: "Sign payload with card", type: .description))
                     return secureCard.sign(data: payload)
                         .tryMap { response in
                             if response.responseStatus == ResponseStatus.success, let signature = response.data {
                                 Swift.print("SIGNATURE: \(signature.hexString())")
+                                _ = self.signJWT(card: secureCard,
+                                                 using: [certificate.certificate],
+                                                 alg: certificate.info.algorithm.alg!)
+                                .sink { _ in
+                                    Swift.print("signJWT done")
+                                } receiveValue: { output in
+                                    Swift.print("signJWT -->>\(output.serialize())")
+                                }
+
                                 return signature
                             } else {
                                 throw NFCLoginController.Error.signatureFailure(response.responseStatus)
@@ -208,6 +217,28 @@ extension Publisher where Output == HealthCardType, Self.Failure == Swift.Error 
         }
         .eraseToAnyPublisher()
     }
+    
+    public func signJWT(
+        card: HealthCardType,
+        using certificates: [Data],
+        alg: JWT.Algorithm = .bp256r1,
+        jsonEncoder _: JSONEncoder = JSONEncoder()
+    ) -> AnyPublisher<JWT, Swift.Error> {
+        Deferred { () -> AnyPublisher<JWT, Swift.Error> in
+            // [REQ:gemF_Tokenverschlüsselung:A_20526-01] Embed certificate
+            let header = JWT.Header(alg: alg, x5c: certificates, typ: "JWT", cty: "NJWT")
+            let payload = IDPChallengeResponse(njwt: Certificates.njwt)//IDPChallengeResponse(njwt: challenge.challenge.serialize())
+            do {
+                let signer = EGKSigner(card: card)
+                return try JWT(header: header, payload: payload)
+                    .sign(with: signer)
+                    .eraseToAnyPublisher()
+            } catch {
+                return Fail(error: error).eraseToAnyPublisher()
+            }
+        }.eraseToAnyPublisher()
+    }
+    
 }
 
 extension PSOAlgorithm {
@@ -229,3 +260,23 @@ extension Bool {
         }
     }
 }
+
+extension HealthCardCommandType {
+    public func publisherTry(writeTimeout: TimeInterval = 0, readTimeout: TimeInterval = 0)
+    -> AnyPublisher<HealthCardResponseType?, Swift.Error> {
+        Combine.Future<ResponseType?, Swift.Error> { promise in
+            promise(.success(nil))
+        }
+        .map { resp in
+            HealthCardResponse.fromTry(response: resp, for: self)
+        }
+        .eraseToAnyPublisher()
+    }
+}
+
+extension HealthCardResponseType {
+    static func fromTry(response: ResponseType?, for command: HealthCardCommandType) -> HealthCardResponseType? {
+        return nil
+    }
+}
+
